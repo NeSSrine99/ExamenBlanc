@@ -8,20 +8,18 @@ const page = () => {
     const [annonces, setAnnonces ] =useState([]);
 
     useEffect(() => {
-    fetch("/api/Annonces")
+    fetch("/api/annonces")
       .then((response) => response.json())
       .then((data) => setAnnonces(data));
   }, []);
 
   return (
-    <main>
-        <h1>nesrina</h1>
-        <div>
-            {annonces.map((annonce) => (
-                <AnnonceCard key={annonce.id} {...annonce} />
-            ))}
-        </div>
+    <main className="flex items-center justify-center   flex-wrap ">
+      {annonces.map((annonce) => (
+        <AnnonceCard key={annonce.id} {...annonce} />
+      ))}
     </main>
+
   )
 }
 
