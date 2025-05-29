@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono, Montserrat, Roboto } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
 
 
 const roboto = Roboto ({
@@ -24,6 +26,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${montserrat.variable} ${roboto.variable} antialiased`}
       >
+        <Header />
+        <Navbar />
         {children}
       </body>
     </html>

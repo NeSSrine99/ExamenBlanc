@@ -4,13 +4,17 @@
   --background: #ffffff;
   --foreground: #171717;
   --primary: #27a1e6 ;
-  --secondary: #efe935;
+  --secondary: #061954;
+  --gradient: linear-gradient(90deg,rgba(39, 161, 230, 1) 14%, rgba(6, 25, 84, 1) 100%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-roboto: var(--font-roboto);
+  --color-primary:var(--primary) ;
+  --color-secondary: var(--secondary);
+  --color-gradient: var(--gradient);
   
 }
 
