@@ -1,26 +1,17 @@
-'use client';
+"use client";
 
-
-import React, { useEffect, useState } from 'react'
-import AnnonceCard from '../components/AnnonceCard';
+import React from "react";
+import AnnonceCard from "../components/AnnonceCard";
+import Annonces from "./data";
 
 const page = () => {
-    const [annonces, setAnnonces ] =useState([]);
-
-    useEffect(() => {
-    fetch("/api/annonces")
-      .then((response) => response.json())
-      .then((data) => setAnnonces(data));
-  }, []);
-
   return (
-    <main className="flex items-center justify-center   flex-wrap ">
-      {annonces.map((annonce) => (
+    <main className="flex items-center justify-center flex-wrap">
+      {Annonces.map((annonce) => (
         <AnnonceCard key={annonce.id} {...annonce} />
       ))}
     </main>
+  );
+};
 
-  )
-}
-
-export default page
+export default page;

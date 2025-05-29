@@ -26,9 +26,12 @@ const AnnonceCard = ({
           Luxury {category.toLowerCase()} located in a prime area.
         </p>
         <p className="mt-3 text-indigo-600 font-bold text-md">${prix}</p>
-        <button className="mt-4 w-full bg-primary text-white py-2 px-4 rounded-xl hover:bg-indigo-700 transition">
+        <a
+          href={`/annonces/${id}`}
+          className="mt-4 w-full inline-block bg-primary text-white py-2 px-4 rounded-xl hover:bg-indigo-700 transition text-center"
+        >
           View Details
-        </button>
+        </a>
       </div>
     </article>
   );
