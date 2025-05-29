@@ -12,16 +12,16 @@ const Navbar = () => {
     <nav className='flex items-center justify-between px-4 py-3 bg-white shadow-md relative'>
       {/* Logo Section */}
       <div className='flex items-center gap-2'>
-        <Image src="/images/logo3.png" width={80} height={50} alt="Logo" />
+        <Image src="/images/logo3.png"  alt="logo"  width={80} height={50} className='mb-4' />
         <p className='text-secondary font-black text-xl'>Rent House</p>
       </div>
 
       {/* Desktop Links */}
       <div className='hidden md:flex items-center gap-6 font-medium text-secondary'>
-        {['/', '/annonces', '/publier', '/inscription'].map((path, index) => {
+        {['/accueil', '/annonces', '/publier', '/inscription'].map((path, index) => {
           const names = ['Accueil', 'Annonces', 'Publier', 'Inscription']
           return (
-            <Link key={index} href={path} className='hover:text-primary hover:underline transition duration-300'>
+            <Link key={index} href={path} className='font-medium text-secondary  hover:text-primary hover:underline transition duration-300'>
               {names[index]}
             </Link>
           )
@@ -50,10 +50,10 @@ const Navbar = () => {
           ${openMenu ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0 pointer-events-none'}
         `}
       >
-        <Link href="/" className='hover:text-primary hover:underline transition duration-300 w-full'>Accueil</Link>
-        <Link href="/annonces" className='hover:text-primary hover:underline transition duration-300 w-full'>Annonces</Link>
-        <Link href="/publier" className='hover:text-primary hover:underline transition duration-300 w-full'>Publier</Link>
-        <Link href="/inscription" className='hover:text-primary hover:underline transition duration-300 w-full'>Inscription</Link>
+        <Link href="/accueil" className='font-medium text-secondary hover:text-primary hover:underline transition duration-300 w-full'>Accueil</Link>
+        <Link href="/annonces" className='font-medium text-secondary  hover:text-primary hover:underline transition duration-300 w-full'>Annonces</Link>
+        <Link href="/publier" className='font-medium text-secondary  hover:text-primary hover:underline transition duration-300 w-full'>Publier</Link>
+        <Link href="/inscription" className='font-medium text-secondary  hover:text-primary hover:underline transition duration-300 w-full'>Inscription</Link>
         <button className='bg-primary py-2 px-4 rounded-2xl text-white font-semibold  hover:opacity-90 transition'>Login</button>
       </div>
     </nav>

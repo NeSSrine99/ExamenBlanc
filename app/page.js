@@ -1,9 +1,10 @@
 import Image from "next/image";
+import AnnonceCard from "./components/AnnonceCard";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="font-roboto font-black">Nesrin</h1>
+      <AnnonceCard />
     </div>
   );
 }
