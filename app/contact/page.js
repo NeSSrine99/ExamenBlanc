@@ -116,7 +116,7 @@ const ContactPage = () => {
       </form>
       <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full flex flex-col items-center">
         <img
-          src="/images/logo1.png"
+          src="/images/logo2.png"
           alt="Adresse"
           className="w-20 h-20 mb-4 rounded-full object-cover"
         />
