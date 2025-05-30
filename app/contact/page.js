@@ -3,6 +3,9 @@
 import React from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { CiLocationOn } from "react-icons/ci";
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { IoMailOutline } from "react-icons/io5";
 
 const validationSchema = Yup.object({
   name: Yup.string()
@@ -35,14 +38,13 @@ const ContactPage = () => {
   });
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4">
-      <h1 className="text-3xl font-bold mb-6">Contactez-nous</h1>
+    <main className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 lg:flex-row lg:gap-16">
       <form
         onSubmit={formik.handleSubmit}
         className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full mb-8"
       >
         <div className="mb-4">
-          <label className="block mb-1 font-semibold">Nom</label>
+          <label className="block mb-1 font-semibold text-secondary">Nom</label>
           <input
             type="text"
             name="name"
@@ -58,7 +60,9 @@ const ContactPage = () => {
           )}
         </div>
         <div className="mb-4">
-          <label className="block mb-1 font-semibold">Email (8 chiffres)</label>
+          <label className="block mb-1 font-semibold text-secondary">
+            Email (8 chiffres)
+          </label>
           <input
             type="text"
             name="email"
@@ -74,7 +78,7 @@ const ContactPage = () => {
           )}
         </div>
         <div className="mb-4">
-          <label className="block mb-1 font-semibold">
+          <label className="block mb-1 font-semibold text-secondary">
             Téléphone (8 chiffres)
           </label>
           <input
@@ -92,7 +96,9 @@ const ContactPage = () => {
           )}
         </div>
         <div className="mb-4">
-          <label className="block mb-1 font-semibold">Message</label>
+          <label className="block mb-1 font-semibold text-secondary">
+            Message
+          </label>
           <textarea
             name="message"
             onChange={formik.handleChange}
@@ -114,23 +120,39 @@ const ContactPage = () => {
           Envoyer
         </button>
       </form>
-      <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md w-full flex flex-col items-center">
+      <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full flex flex-col items-center border border-gray-100">
         <img
-          src="/images/logo2.png"
+          src="/images/logo3.png"
           alt="Adresse"
-          className="w-20 h-20 mb-4 rounded-full object-cover"
+          className="w-20 h-20 mb-4 rounded-full object-cover border-4 border-blue-100 shadow-md"
         />
-        <h2 className="text-xl font-bold mb-2">Nos informations</h2>
-        <p className="mb-1">
-          <span className="font-semibold">Adresse:</span> 123 Rue de
-          l'Immobilier, Tunis
-        </p>
-        <p className="mb-1">
-          <span className="font-semibold">Téléphone:</span> 22 334 556
-        </p>
-        <p className="mb-1">
-          <span className="font-semibold">Email:</span> contact@immobilier.tn
-        </p>
+        <h2 className="text-2xl font-bold text-secondary mb-4">
+          Nos informations
+        </h2>
+        <div className="space-y-3 text-center">
+          <p className="flex items-start justify-center gap-2">
+            <span className="font-semibold text-gray-600 flex items-center gap-1">
+              <CiLocationOn color="red" size={18} /> Adresse:
+            </span>
+            <span className="text-gray-700">
+              123 Rue de l'Immobilier, Tunis
+            </span>
+          </p>
+          <p className="flex items-start justify-center gap-2">
+            <span className="font-semibold text-gray-600 flex items-center gap-1">
+              <MdOutlineLocalPhone color="red" size={18} /> Téléphone:
+            </span>
+            <span className="text-gray-700">22 334 556</span>
+          </p>
+          <p className="flex items-start justify-center gap-2">
+            <span className="font-semibold text-gray-600 flex items-center gap-1">
+              <IoMailOutline color="red" size={18} /> Email:
+            </span>
+            <span className="text-blue-600 hover:underline">
+              contact@immobilier.tn
+            </span>
+          </p>
+        </div>
       </div>
     </main>
   );
