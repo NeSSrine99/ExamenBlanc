@@ -1,3 +1,4 @@
+import ButtonAlert from "@/app/components/ButtonAlert";
 import Annonces from "../data";
 
 export async function generateMetadata({ params }) {
@@ -22,27 +23,26 @@ const AnnonceDetailsPage = async ({ params }) => {
   }
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-50">
-      <article className="bg-white rounded-2xl shadow-lg p-8 max-w-lg w-full">
-        <img
-          src={annonce.image}
-          alt={annonce.name}
-          className="w-full h-64 object-cover rounded-xl mb-6"
-        />
-        <h1 className="text-2xl font-bold mb-2">{annonce.name}</h1>
-        <span className="inline-block bg-primary text-white text-xs px-3 py-1 rounded-full mb-4">
+    <main className="flex flex-wrap items-start justify-start min-h-screen bg-gray-50 lg:px-[120px] sm:px-[60px] px-4  py-[100px] ">
+      <img
+        src={annonce.image}
+        alt={annonce.name}
+        className=" max-h-[600px] object-cover rounded-xl mb-6"
+      />
+      <article className="px-6">
+        <span className="inline-block  text-gray-500  px-3 py-1 rounded-full mb-4">
           {annonce.category}
         </span>
-        <p className="text-lg text-indigo-600 font-bold mb-4">
-          ${annonce.prix}
-        </p>
-        <p className="text-gray-700 mb-6">
-          Luxury {annonce.category.toLowerCase()} located in a prime area. More
-          details can be added here.
-        </p>
-        <a href="/annonces" className="text-primary hover:underline">
-          &larr; Back to annonces
-        </a>
+        <h1 className="text-2xl font-bold mb-2">{annonce.name}</h1>
+
+        <p className="text-lg text-primary font-bold mb-4">${annonce.prix}</p>
+        <p className="text-gray-700 mb-6">{annonce.description}</p>
+        <div className="flex gap-4 items-center">
+          <ButtonAlert annonceId={annonceId} />
+          <a href="/annonces" className="text-primary hover:underline">
+            Back to annonces
+          </a>
+        </div>
       </article>
     </main>
   );

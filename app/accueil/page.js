@@ -8,29 +8,30 @@ const page = () => {
         {/* Text Section */}
         <div className="text-left">
           <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl leading-tight">
-            Understand user flow and
-            <strong className="text-primary"> increase </strong>
-            conversions
+            Find your <strong className="text-primary">perfect home</strong>{" "}
+            <br />
+            with ease and confidence
           </h1>
 
           <p className="mt-6 text-base text-gray-700 sm:text-lg leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque,
-            nisi. Natus, provident accusamus impedit minima harum corporis iusto.
+            Browse a wide range of stunning houses, villas, and apartments for
+            rent. Whether you're looking for comfort, luxury, or both — your
+            dream home is just a few clicks away.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-4">
             <a
-              className="inline-block rounded-md border border-primary bg-primary px-6 py-3 text-white font-semibold shadow hover:bg-indigo-700 transition"
-              href="#"
+              className="inline-block rounded-md border border-primary bg-primary px-6 py-3 text-white font-semibold shadow hover:bg-secondary transition"
+              href="/annonces"
             >
-              Get Started
+              Annonces
             </a>
 
             <a
               className="inline-block rounded-md border border-gray-300 px-6 py-3 text-gray-700 font-semibold shadow hover:bg-gray-100 transition"
-              href="#"
+              href="/publier"
             >
-              Learn More
+              Publier
             </a>
           </div>
         </div>
@@ -39,10 +40,10 @@ const page = () => {
         <div className="w-full h-auto">
           <Image
             src="/images/banner2.jpg"
-            alt="banner"
+            alt="Beautiful rental house"
             width={600}
             height={600}
-            className="w-full h-auto object-cover rounded-lg shadow-md"
+            className="w-full md:min-w-[500px] h-auto object-cover rounded-lg shadow-md"
             priority
           />
         </div>
