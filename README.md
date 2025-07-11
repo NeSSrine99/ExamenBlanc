@@ -24,9 +24,9 @@ It helps users find available rental homes with ease and provides a clean and us
 
 ---
 
-## 🔗 Live Demo
+##  Live Demo
 
-👉 [Visit Live Demo](https://rent-house-wheat.vercel.app/)
+=> [Visit Live Demo](https://rent-house-wheat.vercel.app/)
 
 
 ---
